@@ -1,0 +1,211 @@
+{{extend 'template.html'}} 
+{{
+def name_changer(book_name):
+     book = book_name.lower()
+     book = book.replace(" ", "_")
+     return book
+}}
+<script>
+    
+</script>
+<style>
+
+.half {
+    position:relative;
+}
+.font{
+	font-size:6em;
+}
+.half:after {
+    content:'';
+    position:absolute;
+    z-index:1;
+    background:white;
+    width: 50%;
+    height: 100%;
+    left: 47%;
+}
+.mytit{
+    color:black;
+    font-weight:bold;
+    font-size:40px;
+    margin-bottom:20px;
+    display:block;
+    padding:10px;
+}
+    .myimg{
+        display:inline-block;
+        margin-right:20px;
+    }
+    .mynext{
+        font-size:13px;
+        display:inline-block;
+    }
+    .gotopa{
+
+        display:inline-block;
+    }
+    .myinfo{
+               font-size:17px; 
+    }
+    .mycomm{
+        
+    }
+</style>
+<script src="{{=URL('static' , 'js/jmag.js')}}" type="text/javascript"></script>
+<link rel="stylesheet" href="{{=URL('static','css/books.css')}}"/>
+    <link rel="stylesheet"  href="{{=URL('static','css/bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{=URL('static','css/f/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{=URL('static','css/f/star-rating.css')}}" media="all" rel="stylesheet" type="text/css"/>
+    <script src="{{=URL('static','css/f/jquery.min.js')}}"></script>
+    <script src="{{=URL('static','css/f/star-rating.js')}}" type="text/javascript"></script>
+  
+<div>
+        <span class=mytit>
+            <center>{{=book.title}}</center>
+    </span>
+   <div class="myimg" style="float:left; height: 350px;">--><img width=200 src="/library/static/book_covers/{{=name_changer(book.title)}}.jpg" float="left">
+</div>
+    <div class="mynext">
+        
+        <b>Author:</b> {{=author}} <br>
+		<b>Title:</b> {{=book.title}} <br>
+        <b>Category:</b> {{=book.category}} </br>
+        <b>Price:</b> {{=book.price}} TL <br>
+        <b>Publisher:</b> {{=book.publisher}}</br>
+        <b>Rating:</b> {{=book.rating}}</br></br>
+</div>
+<br><br>
+    <div class="myinfo"><b>Info:</b> {{=book.info}}</div>
+<br><br><br><br><br><br><br>
+        <div class="gotopa">
+        <ul style="float:right; width: 500px; display: block; list-style-type: none;">
+            <h4 >Buy from the available websites</h4>
+            <li style="padding-right: 50px;padding-bottom: 20px;"><a href="{{=book.amazon_link}}"><img width=100 src="/library/static/link_logos/amazon.jpg"> </a></li>
+            <li style="padding-right: 50px;padding-bottom: 20px;"><a href="{{=book.betterworld_link}}"><img width=100 src="/library/static/link_logos/better_world_books.jpg"></a></li>
+            <li style="padding-right: 50px;padding-bottom: 20px;"><a href="{{=book.idefix_link}}"><img width=100 src="/library/static/link_logos/idefix.jpg"> </a></li>
+        </ul>
+</div>
+      </div>
+<div class="mycomm">
+{{if len(comments):}}
+    <font color=black><h2>Comments</h2></font><br /><p>
+  {{for comment in comments:}}
+       
+<div class="comments-container">
+
+        <span id="comments-list" class="comments-list">
+            
+                <div class="comment-main-level">
+                    <!-- Avatar -->
+                    <div class="comment-avatar"><img src="{{=URL('download',args=[comment.user.photo])}}" alt=""></div>
+                    <!-- Contenedor del Comentario -->
+                    <div class="comment-box">
+                        <div class="comment-head">
+                            <h6 class="comment-name by-author"><a href="/library/default/account/{{=comment.post.author}}">{{=comment.user.username}}</a></h6>
+                         
+                            <i class="fa fa-reply"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <div class="comment-content">
+   {{=comment.post.body}}
+                        </div>
+                        <div align=right>
+                            {{if comment.post.star:}}
+                            {{for i in range(0,int(comment.post.star)):}}
+                            <span class="glyphicon glyphicon-star"></span>
+                            {{pass}}
+                            {{if comment.post.star > int(comment.post.star):}}
+                                <span class="glyphicon glyphicon-star half"></span>
+                             {{for i in range(int(comment.post.star)+1,5):}}
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            {{pass}}
+                            {{else:}}
+                            {{for i in range(int(comment.post.star),5):}}
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            {{pass}}
+                            {{pass}}
+                            {{pass}}
+                        </div>
+                        <a style="margin-left:15px;" href="{{='/library/default/edit_comment/%s/%d/%d?q=%d' % (comment.post.field, comment.post.id, comment.post.image_id, comment.post.author)}}">Edit
+    <a style="margin-left:15px;" href="{{='/library/default/delete_comment/%s/%d/%d?q=%d' % (comment.post.field, comment.post.id, comment.post.image_id, comment.post.author)}}">Delete
+    </a><br>
+                    </div>
+                </div>
+            
+    </span>
+</div>
+  {{pass}}</p>
+{{else:}}
+  <h2>No comments posted yet</h2>
+{{pass}}
+<h2>Post a comment</h2>
+{{if form:}}
+  {{=form}}
+<form name="var" action='{{"URL(books/book.id)"}}'>
+    
+<input id="kartik" name="p" class="rating" data-stars="5" data-step="0.5"/>
+    <div class="form-group" style="margin-top:10px">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-default">Reset</button>
+    </div>
+</form>
+{{else:}}
+   <div style="margin-bottom: 50px; margin-top: 20px;">Please login or <b>{{=A("signup", _href=URL("user", "signup"))}} </b>first to post a comment...</div>
+{{pass}}     
+ {{if response.flash:}} <div class="w2p_flash_book alert alert-dismissable"><a href="/library/default/book/{{=book.id}}">{{=response.flash}}</a></div> {{pass}}
+{{=book.id}}
+</div>
+
+<script>
+    jQuery(document).ready(function () {
+        $("#input-21f").rating({
+            starCaptions: function(val) {
+                if (val < 3) {
+                    return val;
+                } else {
+                    return 'high';
+                }
+            },
+            starCaptionClasses: function(val) {
+                if (val < 3) {
+                    return 'label label-danger';
+                } else {
+                    return 'label label-success';
+                }
+            },
+            hoverOnClear: false
+        });
+        
+        $('#rating-input').rating({
+              min: 0,
+              max: 5,
+              step: 1,
+              size: 'lg',
+              showClear: false
+           });
+           
+        $('#btn-rating-input').on('click', function() {
+            $('#rating-input').rating('refresh', {
+                showClear:true, 
+                disabled: !$('#rating-input').attr('disabled')
+            });
+        });
+        
+        
+        $('.btn-danger').on('click', function() {
+            $("#kartik").rating('destroy');
+        });
+        
+  $('.btn-success').on('click', function() {
+            $("#kartik").rating('create');
+        });
+        
+        $('#rating-input').on('rating.change', function() {
+            alert($('#rating-input').val());
+        });
+        
+        
+        $('.rb-rating').rating({'showCaption':true, 'stars':'3', 'min':'0', 'max':'3', 'step':'1', 'size':'xs', 'starCaptions': {0:'status:nix', 1:'status:wackelt', 2:'status:geht', 3:'status:laeuft'}});
+    });
+</script>

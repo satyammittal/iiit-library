@@ -1,0 +1,385 @@
+(dp1
+S'output'
+p2
+S'missing "pass" in view'
+p3
+sS'layer'
+p4
+S'ParserContainer'
+p5
+sS'code'
+p6
+S'response.write(\'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\\n<html xmlns="http://www.w3.org/1999/xhtml">\\n<head>\\n<title>\', escape=False)\nresponse.write(page_title)\nresponse.write(\'</title>\\n    <link rel="stylesheet" href="/library/static/css/b.css" type="text/css" />\\n<link rel="stylesheet" href="/library/static/css/mytable.css" type="text/css" />\\n<script type="text/javascript">\\n\\t\\t\\t\\tvar imageArray = new Array();\\n\\t\\t\\t\\timageArray[0] = new Image();\\n\\t\\t\\t\\timageArray[1] = new Image();\\n\\t\\t\\t\\timageArray[0].src = "/library/static/imgs/book.jpg";\\n\\t\\t\\t\\timageArray[1].src = "/library/static/images/books2.jpg";\\n\\n\\t\\t\\t\\tvar step=0;\\n\\t\\t\\t\\tfunction slideit()\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\tdocument.getElementById(\\\'slide\\\').src = imageArray[step].src;\\n\\t\\t\\t\\t\\t\\tif (step<1)\\n\\t\\t\\t\\t\\t\\t\\tstep++;\\n\\t\\t\\t\\t\\t\\telse\\n\\t\\t\\t\\t\\t\\t\\tstep=0;\\n\\t\\t\\t\\t\\t\\tsetTimeout("slideit()",2000);\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\tslideit();\\n\\n\\t\\t\\t</script>\\t\\n<style>\\n    .slide{\\n        height:400px;\\n    }\\n  header,nav,ol,ul{\\n  margin: 0;\\n  padding: 0;\\n  border: 0;\\n  font-size: 100%;\\n  font: inherit;\\n  vertical-align: baseline;\\n}\\n    ol, ul {\\n  list-style: none;\\n}\\n    header {\\n        font-size:12px;\\n        width:100%;\\n  display:block;\\n  padding-top: 0px;\\n        padding:0px;\\n        margin:0px;\\n  border-bottom: 1px solid #dadada;\\n  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.04);\\n  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04);\\n}\\n\\nnav {\\n    z-index:2;\\n    width:100%;\\n    display:block;\\n  height: 34px;\\n    padding:0px;\\n    margin:0px;\\n  border-bottom: 5px solid white;\\n  -webkit-box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);\\n  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);\\n}\\n\\n.nav {\\n  margin: 0 auto;\\n  width: 680px;\\n}\\n.nav a {\\n  display: block;\\n  text-decoration: none;\\n}\\n.nav > li {\\n  float: left;\\n  margin-right: 0px;\\n}\\n.nav > li > a {\\n  height: 34px;\\n  line-height: 34px;\\n  padding: 0 20px;\\n  font-weight: bold;\\n  color: white;\\n  text-decoration: none;\\n  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);\\n  background: #e6b800;\\n  border-radius: 3px 3px 0 0;\\n  background-image: -webkit-linear-gradient(top, #9cb6c5, #759aaf);\\n  background-image: -moz-linear-gradient(top, #9cb6c5, #759aaf);\\n  background-image: -o-linear-gradient(top, #9cb6c5, #759aaf);\\n  background-image: linear-gradient(to bottom, #9cb6c5, #759aaf);\\n  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 -2px 2px rgba(0, 0, 0, 0.03), 0 2px white, 0 0 2px rgba(0, 0, 0, 0.2);\\n  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 -2px 2px rgba(0, 0, 0, 0.03), 0 2px white, 0 0 2px rgba(0, 0, 0, 0.2);\\n}\\n.nav > li > a:hover {\\n  text-decoration: none;\\n  background: #e6b800;\\n  background-image: -webkit-linear-gradient(top, #afc5d1, #85a6b8);\\n  background-image: -moz-linear-gradient(top, #afc5d1, #85a6b8);\\n  background-image: -o-linear-gradient(top, #afc5d1, #85a6b8);\\n  background-image: linear-gradient(to bottom, #afc5d1, #85a6b8);\\n}\\n.nav > li.active > a, .nav > li > a:active, .nav > .dropdown:hover > a {\\n  background: white;\\n  color: #404040;\\n  text-shadow: none;\\n  -webkit-box-shadow: 0 2px white, 0 0 2px rgba(0, 0, 0, 0.2);\\n  box-shadow: 0 2px white, 0 0 2px rgba(0, 0, 0, 0.2);\\n}\\n.nav a.icon {\\n  position: relative;\\n  width: 40.8px;\\n  padding: 0;\\n}\\n.nav a.icon > span {\\n  display: block;\\n  position: absolute;\\n  top: 9px;\\n  left: 12px;\\n  height: 16px;\\n  width: 16px;\\n  background-repeat: no-repeat;\\n  background-position: 0 0;\\n  font: 0/0 serif;\\n  text-shadow: none;\\n  color: transparent;\\n}\\n\\n.nav .active a.icon > span, .nav a.icon:active > span {\\n  background-position: 0 -16px;\\n}\\n\\n.dropdown {\\n  position: relative;\\n  border-bottom: 5px solid white;\\n}\\n.dropdown:hover ul {\\n  display: block;\\n}\\n.dropdown ul {\\n  display: none;\\n  position: absolute;\\n  top: 39px;\\n  left: -1px;\\n  min-width: 160px;\\n  padding: 0 0 5px;\\n  background: white;\\n  border: 1px solid #dadada;\\n  border-top: 0;\\n  border-radius: 0 0 3px 3px;\\n  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.04);\\n  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04);\\n}\\n.dropdown ul.large {\\n  min-width: 200px;\\n}\\n.dropdown li {\\n  display: block;\\n  margin: 0 18px;\\n  overflow: visible;\\n}\\n.dropdown li + li {\\n  border-top: 1px solid #eee;\\n}\\n.dropdown li a {\\n  color: #555;\\n  padding: 8px 18px;\\n  margin: 0 -18px;\\n}\\n.dropdown li a:hover {\\n  color: black;\\n}\\n    </style>\\n\\n\\n<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script> \\n <link rel="shortcut icon" href="/library/static/imgs/library4.png"/>\\n<meta name="viewport" content="width=device-width, initial-scale=1">\\n\\n</head>\\n<body onload="slideit();">\\n\\n<div class="container">\\n    <img id=slide height=320px src="/library/static/imgs/book.jpg" width=100%/>\\n</div>\\n<div id="outer-wrapper">\\n  <div id="inner-wrapper">\\n    <div id="content-wrapper">\\n      <div id="content">\\n        <!--<form name="search" action="#" id="search-form">\\n          <input type="text" class="txt" value="Search" />\\n        </form>-->\\n      \\n    \\n        \\n       <!-- <ul id="nav">-->\\n          \\n          \\n           \\n                  \\n\\t\\t<!--\', escape=False)\nmenu = [("index","Home"),("authors","authors"),\n("bookdisplay","Books"),\n("appguide","AppGuide"),("about","About")]\nfor (path,text) in menu:\n    if request.controller == \'default\' and request.function == path:\n        response.write(LI(A(text, _href=URL(\'default\',path))))\n    else:\n        response.write(LI(A(text, _href=URL(\'default\', path))))\n        response.write(\'\\n          \\n         \\n           \', escape=False)\n        pass\n    response.write(\'\\n        \', escape=False)\n    pass\nresponse.write(\'-->\\n<header>\\n    <nav>\\n      <ul class="nav">\\n          <li>\\n              <a href="\', escape=False)\nresponse.write(URL(\'index\'))\nresponse.write(\'">HOME</a>\\n          </li>\\n          <li>\\n              <a href="\', escape=False)\nresponse.write(URL(\'bookdisplay\'))\nresponse.write(\'">BOOKS</a>\\n          </li>\\n          <li>\\n              <a href="\', escape=False)\nresponse.write(URL(\'authors\'))\nresponse.write(\'">AUTHORS</a>\\n          </li>\\n          \', escape=False)\nif user:\n    response.write(\'\\n          <li>\\n              <a href="\', escape=False)\n    response.write(URL(\'search\'))\n    response.write(\'">Search</a>\\n          </li>\\n          \', escape=False)\nelse:\n    response.write(\'\\n        <li class="dropdown">\\n            <a>USER</a>\\n          <ul>\\n                    <li><a href=\\\'/library/user/signup\\\')>Signup</a></li>\\n                    <li><a href="/library/user/signin">Signin</a></li>\\n          </ul>\\n        </li>\\n          \', escape=False)\n    pass\nresponse.write(\'\\n        <li class="dropdown">\\n          <a >Types</a>\\n          <ul >\\n           <!-- <li><a href="index.html">Music</a></li>\\n            <li><a href="index.html">MP3 Downloads</a></li>\\n            <li><a href="index.html">Film &amp; TV</a></li>\\n            <li><a href="index.html">Blu-ray</a></li>\\n            <li><a href="index.html">PC &amp; Video Games</a></li>-->\\n              <li><a href="bookdisplay?id=1">Classics</a></li>\\n                <li><a href="bookdisplay?id=2">Sci-Fic</a></li>\\n                 <li><a href="bookdisplay?id=3">Romance</a></li>\\n                 <li><a href="bookdisplay?id=4">Adventure</a></li>\\n                 <li><a href="bookdisplay?id=5">Thrill</a></li>\\n                 <li><a href="bookdisplay?id=6">History</a></li>\\n                 <li><a href="bookdisplay?id=7">Engineering</a></li>\\n                 <li><a href="bookdisplay?id=8">Others</a></li>\\n          </ul>\\n        </li>\\n      </ul>\\n    </nav>\\n  </header>\\n          <!-- <li style="list-style-image: url(\\\'../static/images/triangle.png\\\');" class="library_categories">Library\\n             <ul class="categories">\\n                <li><a href="bookdisplay?id=1">Classics</a></li>\\n                <li><a href="bookdisplay?id=2">Sci-Fic</a></li>\\n                 <li><a href="bookdisplay?id=3">Romance</a></li>\\n                 <li><a href="bookdisplay?id=4">Adventure</a></li>\\n                 <li><a href="bookdisplay?id=5">Thrill</a></li>\\n                 <li><a href="bookdisplay?id=6">History</a></li>\\n                 <li><a href="bookdisplay?id=7">Engineering</a></li>\\n                 <li><a href="bookdisplay?id=8">Others</a></li>\\n               </ul>\\n               \\n           </li>\\n             <li style="list-style-image: url(\\\'static/images/triangle.png\\\');" class="library_categories">User\\n             <ul class="categories">\\n                    <li><a href=\\\'../user/signup\\\')>Signup</a></li>\\n                    <li><a href="/user/signin">Signin</a></li>\\n                </ul>\\n            </li>\\n        </ul>-->\\n\', escape=False)\nresponse.write(\'\\n<script>\\n    ( function( $ ) {\\n$( document ).ready(function() {\\n$(\\\'#cssmenu > ul > li > a\\\').click(function() {\\n  $(\\\'#cssmenu li\\\').removeClass(\\\'active\\\');\\n  $(this).closest(\\\'li\\\').addClass(\\\'active\\\');\\t\\n  var checkElement = $(this).next();\\n  if((checkElement.is(\\\'ul\\\')) && (checkElement.is(\\\':visible\\\'))) {\\n    $(this).closest(\\\'li\\\').removeClass(\\\'active\\\');\\n    checkElement.slideUp(\\\'normal\\\');\\n  }\\n  if((checkElement.is(\\\'ul\\\')) && (!checkElement.is(\\\':visible\\\'))) {\\n    $(\\\'#cssmenu ul ul:visible\\\').slideUp(\\\'normal\\\');\\n    checkElement.slideDown(\\\'normal\\\');\\n  }\\n  if($(this).closest(\\\'li\\\').find(\\\'ul\\\').children().length == 0) {\\n    return true;\\n  } else {\\n    return false;\\t\\n  }\\t\\t\\n});\\n});\\n} )( jQuery );\\n</script>\\n<style>\\n    @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);\\n\\n@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);\\n@charset "UTF-8";\\n/* Base Styles */\\n#cssmenu,\\n#cssmenu ul,\\n#cssmenu li,\\n#cssmenu a {\\n  margin: 0;\\n  padding: 0;\\n  border: 0;\\n  list-style: none;\\n  font-weight: normal;\\n  text-decoration: none;\\n  line-height: 1;\\n  font-family: \\\'Open Sans\\\', sans-serif;\\n  font-size: 14px;\\n  position: relative;\\n}\\n#cssmenu {\\n  width: 250px;\\n  border-bottom: 4px solid #656659;\\n  -webkit-border-radius: 3px;\\n  -moz-border-radius: 3px;\\n  border-radius: 3px;\\n}\\n#cssmenu a {\\n  line-height: 1.3;\\n}\\n#cssmenu > ul > li:first-child {\\n  background: #66665e;\\n  background: -moz-linear-gradient(#66665e 0%, #45463d 100%);\\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66665e), color-stop(100%, #45463d));\\n  background: -webkit-linear-gradient(#66665e 0%, #45463d 100%);\\n  background: linear-gradient(#66665e 0%, #45463d 100%);\\n  border: 1px solid #45463d;\\n  -webkit-border-radius: 3px 3px 0 0;\\n  -moz-border-radius: 3px 3px 0 0;\\n  border-radius: 3px 3px 0 0;\\n}\\n#cssmenu > ul > li:first-child > a {\\n  padding: 15px 10px;\\n  background: url(/library/static/images/pattern.png) top left repeat;\\n  border: none;\\n  border-top: 1px solid #818176;\\n  -webkit-border-radius: 3px 3px 0 0;\\n  -moz-border-radius: 3px 3px 0 0;\\n  border-radius: 3px 3px 0 0;\\n  font-family: \\\'Ubuntu\\\', sans-serif;\\n  text-align: center;\\n  font-size: 18px;\\n  font-weight: 300;\\n  text-shadow: 0 -1px 1px #000000;\\n}\\n#cssmenu > ul > li:first-child > a > span {\\n  padding: 0;\\n}\\n#cssmenu > ul > li:first-child:hover {\\n  background: #66665e;\\n  background: -moz-linear-gradient(#66665e 0%, #45463d 100%);\\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66665e), color-stop(100%, #45463d));\\n  background: -webkit-linear-gradient(#66665e 0%, #45463d 100%);\\n  background: linear-gradient(#66665e 0%, #45463d 100%);\\n}\\n#cssmenu > ul > li {\\n  background: #e94f31;\\n  background: -moz-linear-gradient(#e94f31 0%, #d13516 100%);\\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e94f31), color-stop(100%, #d13516));\\n  background: -webkit-linear-gradient(#e94f31 0%, #d13516 100%);\\n  background: linear-gradient(#e94f31 0%, #d13516 100%);\\n}\\n#cssmenu > ul > li:hover {\\n  background: #e84323;\\n  background: -moz-linear-gradient(#e84323 0%, #c33115 100%);\\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e84323), color-stop(100%, #c33115));\\n  background: -webkit-linear-gradient(#e84323 0%, #c33115 100%);\\n  background: linear-gradient(#e84323 0%, #c33115 100%);\\n}\\n#cssmenu > ul > li > a {\\n  font-size: 14px;\\n  display: block;\\n  background: url(/library/static/images/pattern.png) top left repeat;\\n  color: #ffffff;\\n  border: 1px solid #ba2f14;\\n  border-top: none;\\n  text-shadow: 0 -1px 1px #751d0c;\\n}\\n#cssmenu > ul > li > a > span {\\n  display: block;\\n  padding: 12px 10px;\\n  -webkit-border-radius: 4px;\\n  -moz-border-radius: 4px;\\n  border-radius: 4px;\\n}\\n#cssmenu > ul > li > a:hover {\\n  text-decoration: none;\\n}\\n#cssmenu > ul > li.active {\\n  border-bottom: none;\\n}\\n#cssmenu > ul > li.has-sub > a span {\\n  background: url(/library/static/images/icon_plus.png) 96% center no-repeat;\\n}\\n#cssmenu > ul > li.has-sub.active > a span {\\n  background: url(/library/static/images/icon_minus.png) 96% center no-repeat;\\n}\\n/* Sub menu */\\n#cssmenu ul ul {\\n  display: none;\\n  background: #fff;\\n  border-right: 1px solid #a2a194;\\n  border-left: 1px solid #a2a194;\\n}\\n#cssmenu ul ul li {\\n  padding: 0;\\n  border-bottom: 1px solid #d4d4d4;\\n  border-top: none;\\n  background: #f7f7f7;\\n  background: -moz-linear-gradient(#f7f7f7 0%, #ececec 100%);\\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #ececec));\\n  background: -webkit-linear-gradient(#f7f7f7 0%, #ececec 100%);\\n  background: linear-gradient(#f7f7f7 0%, #ececec 100%);\\n}\\n#cssmenu ul ul li:last-child {\\n  border-bottom: none;\\n}\\n#cssmenu ul ul a {\\n  padding: 10px 10px 10px 25px;\\n  display: block;\\n  color: #676767;\\n  font-size: 12px;\\n  font-weight: normal;\\n}\\n#cssmenu ul ul a:before {\\n  content: "\\xc2\\xbb";\\n  position: absolute;\\n  left: 10px;\\n  color: #e94f31;\\n}\\n#cssmenu ul ul a:hover {\\n  color: #e94f31;\\n}\\n</style>\\n<div id="content-inner">\\n          \\n          \', escape=False)\nif request.controller=="default" and request.function=="about" :\n    response.write(\'\\n\\t\\t  \', escape=False)\n    response.write(\' \\n\', escape=False)\n    def name_changer(book_name):\n        book = book_name.lower()\n        book = book.replace(" ", "_")\n        return book\n    response.write(\'\\n<style>\\n.g-star {\\n  font-size: 40px;\\n  color: #e67e22;\\n  &.half {\\n    position: relative;\\n    &:before {\\n      position: relative;\\n      z-index: 9;\\n      width: 47%;\\n      display: block;\\n      overflow: hidden;\\n    }\\n    &:after {\\n      content: \\\'\\\\e006\\\';\\n      position: absolute;\\n      z-index: 8;\\n      color: #bdc3c7;\\n      top: 0;\\n      left: 0;\\n    }\\n  }\\n}</style>\\n<link rel="stylesheet" href="\', escape=False)\n    response.write(URL(\'static\',\'css/books.css\'))\n    response.write(\'"/>\\n<link rel="stylesheet"  href="\', escape=False)\n    response.write(URL(\'static\',\'css/bootstrap.min.css\'))\n    response.write(\'" rel="stylesheet">\\n    <link rel="stylesheet" href="\', escape=False)\n    response.write(URL(\'static\',\'css/f/font-awesome.min.css\'))\n    response.write(\'">\\n    <link rel="stylesheet" href="\', escape=False)\n    response.write(URL(\'static\',\'css/f/star-rating.css\'))\n    response.write(\'" media="all" rel="stylesheet" type="text/css"/>\\n    <script src="\', escape=False)\n    response.write(URL(\'static\',\'css/f/jquery.min.js\'))\n    response.write(\'"></script>\\n    <script src="\', escape=False)\n    response.write(URL(\'static\',\'css/f/star-rating.js\'))\n    response.write(\'" type="text/javascript"></script>\\n  \\n<div>\\n        <b>Author:</b> \', escape=False)\n    response.write(author)\n    response.write(\' <br>\\n\\t\\t<b>Title:</b> \', escape=False)\n    response.write(book.title)\n    response.write(\' <br>\\n        <b>Category:</b> \', escape=False)\n    response.write(book.category)\n    response.write(\' </br>\\n        <b>Price:</b> \', escape=False)\n    response.write(book.price)\n    response.write(\' TL <br>\\n        <b>Publisher:</b> \', escape=False)\n    response.write(book.publisher)\n    response.write(\'</br></br>\\n        \\n        <div style="float:left; height: 350px;"><img width=200 src="/library/static/book_covers/\', escape=False)\n    response.write(name_changer(book.title))\n    response.write(\'.jpg" float="left"> </div>\\n        \\n        <ul style="float:right; width: 500px; display: block; height: 310px; list-style-type: none;">\\n            <h4 >Buy from the available websites</h4>\\n            <li style="padding-right: 50px;padding-bottom: 20px;"><a href="\', escape=False)\n    response.write(book.amazon_link)\n    response.write(\'"><img width=150 src="/library/static/link_logos/amazon.jpg"> </a></li>\\n            <li style="padding-right: 50px;padding-bottom: 20px;"><a href="\', escape=False)\n    response.write(book.betterworld_link)\n    response.write(\'"><img width=150 src="/library/static/link_logos/better_world_books.jpg"></a></li>\\n            <li style="padding-right: 50px;padding-bottom: 20px;"><a href="\', escape=False)\n    response.write(book.idefix_link)\n    response.write(\'"><img width=150 src="/library/static/link_logos/idefix.jpg"> </a></li>\\n        </ul>\\n         <br><br>   \\n        <div><b>Info:</b> \', escape=False)\n    response.write(book.info)\n    response.write(\'</div>\\n        <p></p>\\n      </div>\\n\\n\', escape=False)\n    if len(comments):\n        response.write(\'\\n  <h2>Comments</h2><br /><p>\\n  \', escape=False)\n        for comment in comments:\n            response.write(\'\\n       \\n<div class="comments-container">\\n\\n        <ul id="comments-list" class="comments-list">\\n            <li>\\n                <div class="comment-main-level">\\n                    <!-- Avatar -->\\n                    <div class="comment-avatar"><img src="\', escape=False)\n            response.write(URL(\'download\',args=[comment.user.photo]))\n            response.write(\'" alt=""></div>\\n                    <!-- Contenedor del Comentario -->\\n                    <div class="comment-box">\\n                        <div class="comment-head">\\n                            <h6 class="comment-name by-author"><a href="/library/default/account/\', escape=False)\n            response.write(comment.post.author)\n            response.write(\'">\', escape=False)\n            response.write(comment.user.username)\n            response.write(\'</a></h6>\\n                         \\n                            <i class="fa fa-reply"></i>\\n                            <i class="fa fa-heart"></i>\\n                        </div>\\n                        <div class="comment-content">\\n   \', escape=False)\n            response.write(comment.post.body)\n            response.write(\'\\n                        </div>\\n                        <div align=right>\\n                            \', escape=False)\n            for i in range(0,int(comment.post.star)):\n                response.write(\'\\n                            <span class="glyphicon glyphicon-star"></span>\\n                            \', escape=False)\n                pass\n            response.write(\'\\n                            \', escape=False)\n            if int(comment.post.star) != comment.post.star:\n                response.write(\'\\n                                <span class="g-star half"></span>\\n                             \', escape=False)\n                for i in range(int(comment.post.star)+1,5):\n                    response.write(\'\\n                            <span class="glyphicon glyphicon-star-empty"></span>\\n                            \', escape=False)\n                else:\n                    response.write(\'\\n                            \', escape=False)\n                    for i in range(int(comment.post.star),5):\n                        response.write(\'\\n                            <span class="glyphicon glyphicon-star-empty"></span>\\n                            \', escape=False)\n                        pass\n                    response.write(\'\\n                            \', escape=False)\n                    pass\n                response.write(\'\\n                        </div>\\n                        <a style="margin-left:15px;" href="\', escape=False)\n                response.write(\'/library/default/edit_comment/%s/%d/%d?q=%d\' % (comment.post.field, comment.post.id, comment.post.image_id, comment.post.author))\n                response.write(\'">Edit\\n    <a style="margin-left:15px;" href="\', escape=False)\n                response.write(\'/library/default/delete_comment/%s/%d/%d?q=%d\' % (comment.post.field, comment.post.id, comment.post.image_id, comment.post.author))\n                response.write(\'">Delete\\n    </a><br>\\n                    </div>\\n                </div>\\n            </li>\\n    </ul>\\n</div>\\n  \', escape=False)\n                pass\n            response.write(\'</p>\\n\', escape=False)\n        else:\n            response.write(\'\\n  <h2>No comments posted yet</h2>\\n\', escape=False)\n            pass\n        response.write(\'\\n<h2>Post a comment</h2>\\n\', escape=False)\n        if form:\n            response.write(\'\\n  \', escape=False)\n            response.write(form)\n            response.write(\'\\n\', escape=False)\n        else:\n            response.write(\'\\n   <div style="margin-bottom: 50px; margin-top: 20px;">Please login or <b>\', escape=False)\n            response.write(A("signup", _href=URL("user", "signup")))\n            response.write(\' </b>first to post a comment...</div>\\n\', escape=False)\n            pass\n        response.write(\'     \\n \', escape=False)\n        if response.flash:\n            response.write(\' <div class="w2p_flash_book alert alert-dismissable"><a href="/library/default/book/\', escape=False)\n            response.write(book.id)\n            response.write(\'">\', escape=False)\n            response.write(response.flash)\n            response.write(\'</a></div> \', escape=False)\n            pass\n        response.write(\'\\n\', escape=False)\n        response.write(book.id)\n        response.write(\'\\n<form name="var" action=\\\'\', escape=False)\n        "URL(books/book.id)"\n        response.write(\'\\\'>\\n    \\n<input id="kartik" name="p" class="rating" data-stars="5" data-step="0.5"/>\\n    <div class="form-group" style="margin-top:10px">\\n    <button type="submit" class="btn btn-primary">Submit</button>\\n    <button type="reset" class="btn btn-default">Reset</button>\\n    </div>\\n</form>\\n<script>\\n    jQuery(document).ready(function () {\\n        $("#input-21f").rating({\\n            starCaptions: function(val) {\\n                if (val < 3) {\\n                    return val;\\n                } else {\\n                    return \\\'high\\\';\\n                }\\n            },\\n            starCaptionClasses: function(val) {\\n                if (val < 3) {\\n                    return \\\'label label-danger\\\';\\n                } else {\\n                    return \\\'label label-success\\\';\\n                }\\n            },\\n            hoverOnClear: false\\n        });\\n        \\n        $(\\\'#rating-input\\\').rating({\\n              min: 0,\\n              max: 5,\\n              step: 1,\\n              size: \\\'lg\\\',\\n              showClear: false\\n           });\\n           \\n        $(\\\'#btn-rating-input\\\').on(\\\'click\\\', function() {\\n            $(\\\'#rating-input\\\').rating(\\\'refresh\\\', {\\n                showClear:true, \\n                disabled: !$(\\\'#rating-input\\\').attr(\\\'disabled\\\')\\n            });\\n        });\\n        \\n        \\n        $(\\\'.btn-danger\\\').on(\\\'click\\\', function() {\\n            $("#kartik").rating(\\\'destroy\\\');\\n        });\\n        \\n  $(\\\'.btn-success\\\').on(\\\'click\\\', function() {\\n            $("#kartik").rating(\\\'create\\\');\\n        });\\n        \\n        $(\\\'#rating-input\\\').on(\\\'rating.change\\\', function() {\\n            alert($(\\\'#rating-input\\\').val());\\n        });\\n        \\n        \\n        $(\\\'.rb-rating\\\').rating({\\\'showCaption\\\':true, \\\'stars\\\':\\\'3\\\', \\\'min\\\':\\\'0\\\', \\\'max\\\':\\\'3\\\', \\\'step\\\':\\\'1\\\', \\\'size\\\':\\\'xs\\\', \\\'starCaptions\\\': {0:\\\'status:nix\\\', 1:\\\'status:wackelt\\\', 2:\\\'status:geht\\\', 3:\\\'status:laeuft\\\'}});\\n    });\\n</script>\\n\', escape=False)\n        response.write(\'\\n\\t\\t     \', escape=False)\n        response.write(\'<div class="content-left"> <img src="/library/static/imgs/mugla3.jpg" alt="NYC Photo" />\\n            <p>MU\\xc4\\x9eLA<br />\\n              <span>Mu\\xc4\\x9fla in the fall 2015</span></p>\\n          </div>\\n          <div class="content-right">\\n            <h2>\', escape=False)\n        response.write(\'</h2>\\n            \\n            <p class="intro"></p>\\n            <!--<p><a href="http://www.slicendiceit.com">slice n dice</a></p>-->\\n            <!--<p class="end-story-links"><a href="#">14 Comments</a> | <a href="#">Read on...</a></p>-->\\n          </div>\\n          <div class="content-full">\\n            <!--<h2>Full page blog provides plenty of space</h2>-->\\n            \\n            <p class="intro"></p>\\n            <p></p>\\n            <img src="/library/static/imgs/muglaautumn2.jpg" alt="" class="content-img" />\\n            <p class="intro"></p>\\n            <p></p>\\n            <p></p>\\n            <!--<p class="end-story-links"><a href="#">37 Comments</a> | <a href="#">Read on...</a></p>-->\\n\\t\\t\\t\\n</div>\\n\', escape=False)\n        response.write(\'\\n\\t\\t  \\n\\t\\t  \', escape=False)\n    else:\n        response.write(\' \', escape=False)\n        response.write(\' \\n\', escape=False)\n        def name_changer(book_name):\n            book = book_name.lower()\n            book = book.replace(" ", "_")\n            return book\n        response.write(\'\\n<style>\\n.g-star {\\n  font-size: 40px;\\n  color: #e67e22;\\n  &.half {\\n    position: relative;\\n    &:before {\\n      position: relative;\\n      z-index: 9;\\n      width: 47%;\\n      display: block;\\n      overflow: hidden;\\n    }\\n    &:after {\\n      content: \\\'\\\\e006\\\';\\n      position: absolute;\\n      z-index: 8;\\n      color: #bdc3c7;\\n      top: 0;\\n      left: 0;\\n    }\\n  }\\n}</style>\\n<link rel="stylesheet" href="\', escape=False)\n        response.write(URL(\'static\',\'css/books.css\'))\n        response.write(\'"/>\\n<link rel="stylesheet"  href="\', escape=False)\n        response.write(URL(\'static\',\'css/bootstrap.min.css\'))\n        response.write(\'" rel="stylesheet">\\n    <link rel="stylesheet" href="\', escape=False)\n        response.write(URL(\'static\',\'css/f/font-awesome.min.css\'))\n        response.write(\'">\\n    <link rel="stylesheet" href="\', escape=False)\n        response.write(URL(\'static\',\'css/f/star-rating.css\'))\n        response.write(\'" media="all" rel="stylesheet" type="text/css"/>\\n    <script src="\', escape=False)\n        response.write(URL(\'static\',\'css/f/jquery.min.js\'))\n        response.write(\'"></script>\\n    <script src="\', escape=False)\n        response.write(URL(\'static\',\'css/f/star-rating.js\'))\n        response.write(\'" type="text/javascript"></script>\\n  \\n<div>\\n        <b>Author:</b> \', escape=False)\n        response.write(author)\n        response.write(\' <br>\\n\\t\\t<b>Title:</b> \', escape=False)\n        response.write(book.title)\n        response.write(\' <br>\\n        <b>Category:</b> \', escape=False)\n        response.write(book.category)\n        response.write(\' </br>\\n        <b>Price:</b> \', escape=False)\n        response.write(book.price)\n        response.write(\' TL <br>\\n        <b>Publisher:</b> \', escape=False)\n        response.write(book.publisher)\n        response.write(\'</br></br>\\n        \\n        <div style="float:left; height: 350px;"><img width=200 src="/library/static/book_covers/\', escape=False)\n        response.write(name_changer(book.title))\n        response.write(\'.jpg" float="left"> </div>\\n        \\n        <ul style="float:right; width: 500px; display: block; height: 310px; list-style-type: none;">\\n            <h4 >Buy from the available websites</h4>\\n            <li style="padding-right: 50px;padding-bottom: 20px;"><a href="\', escape=False)\n        response.write(book.amazon_link)\n        response.write(\'"><img width=150 src="/library/static/link_logos/amazon.jpg"> </a></li>\\n            <li style="padding-right: 50px;padding-bottom: 20px;"><a href="\', escape=False)\n        response.write(book.betterworld_link)\n        response.write(\'"><img width=150 src="/library/static/link_logos/better_world_books.jpg"></a></li>\\n            <li style="padding-right: 50px;padding-bottom: 20px;"><a href="\', escape=False)\n        response.write(book.idefix_link)\n        response.write(\'"><img width=150 src="/library/static/link_logos/idefix.jpg"> </a></li>\\n        </ul>\\n         <br><br>   \\n        <div><b>Info:</b> \', escape=False)\n        response.write(book.info)\n        response.write(\'</div>\\n        <p></p>\\n      </div>\\n\\n\', escape=False)\n        if len(comments):\n            response.write(\'\\n  <h2>Comments</h2><br /><p>\\n  \', escape=False)\n            for comment in comments:\n                response.write(\'\\n       \\n<div class="comments-container">\\n\\n        <ul id="comments-list" class="comments-list">\\n            <li>\\n                <div class="comment-main-level">\\n                    <!-- Avatar -->\\n                    <div class="comment-avatar"><img src="\', escape=False)\n                response.write(URL(\'download\',args=[comment.user.photo]))\n                response.write(\'" alt=""></div>\\n                    <!-- Contenedor del Comentario -->\\n                    <div class="comment-box">\\n                        <div class="comment-head">\\n                            <h6 class="comment-name by-author"><a href="/library/default/account/\', escape=False)\n                response.write(comment.post.author)\n                response.write(\'">\', escape=False)\n                response.write(comment.user.username)\n                response.write(\'</a></h6>\\n                         \\n                            <i class="fa fa-reply"></i>\\n                            <i class="fa fa-heart"></i>\\n                        </div>\\n                        <div class="comment-content">\\n   \', escape=False)\n                response.write(comment.post.body)\n                response.write(\'\\n                        </div>\\n                        <div align=right>\\n                            \', escape=False)\n                for i in range(0,int(comment.post.star)):\n                    response.write(\'\\n                            <span class="glyphicon glyphicon-star"></span>\\n                            \', escape=False)\n                    pass\n                response.write(\'\\n                            \', escape=False)\n                if int(comment.post.star) != comment.post.star:\n                    response.write(\'\\n                                <span class="g-star half"></span>\\n                             \', escape=False)\n                    for i in range(int(comment.post.star)+1,5):\n                        response.write(\'\\n                            <span class="glyphicon glyphicon-star-empty"></span>\\n                            \', escape=False)\n                    else:\n                        response.write(\'\\n                            \', escape=False)\n                        for i in range(int(comment.post.star),5):\n                            response.write(\'\\n                            <span class="glyphicon glyphicon-star-empty"></span>\\n                            \', escape=False)\n                            pass\n                        response.write(\'\\n                            \', escape=False)\n                        pass\n                    response.write(\'\\n                        </div>\\n                        <a style="margin-left:15px;" href="\', escape=False)\n                    response.write(\'/library/default/edit_comment/%s/%d/%d?q=%d\' % (comment.post.field, comment.post.id, comment.post.image_id, comment.post.author))\n                    response.write(\'">Edit\\n    <a style="margin-left:15px;" href="\', escape=False)\n                    response.write(\'/library/default/delete_comment/%s/%d/%d?q=%d\' % (comment.post.field, comment.post.id, comment.post.image_id, comment.post.author))\n                    response.write(\'">Delete\\n    </a><br>\\n                    </div>\\n                </div>\\n            </li>\\n    </ul>\\n</div>\\n  \', escape=False)\n                    pass\n                response.write(\'</p>\\n\', escape=False)\n            else:\n                response.write(\'\\n  <h2>No comments posted yet</h2>\\n\', escape=False)\n                pass\n            response.write(\'\\n<h2>Post a comment</h2>\\n\', escape=False)\n            if form:\n                response.write(\'\\n  \', escape=False)\n                response.write(form)\n                response.write(\'\\n\', escape=False)\n            else:\n                response.write(\'\\n   <div style="margin-bottom: 50px; margin-top: 20px;">Please login or <b>\', escape=False)\n                response.write(A("signup", _href=URL("user", "signup")))\n                response.write(\' </b>first to post a comment...</div>\\n\', escape=False)\n                pass\n            response.write(\'     \\n \', escape=False)\n            if response.flash:\n                response.write(\' <div class="w2p_flash_book alert alert-dismissable"><a href="/library/default/book/\', escape=False)\n                response.write(book.id)\n                response.write(\'">\', escape=False)\n                response.write(response.flash)\n                response.write(\'</a></div> \', escape=False)\n                pass\n            response.write(\'\\n\', escape=False)\n            response.write(book.id)\n            response.write(\'\\n<form name="var" action=\\\'\', escape=False)\n            "URL(books/book.id)"\n            response.write(\'\\\'>\\n    \\n<input id="kartik" name="p" class="rating" data-stars="5" data-step="0.5"/>\\n    <div class="form-group" style="margin-top:10px">\\n    <button type="submit" class="btn btn-primary">Submit</button>\\n    <button type="reset" class="btn btn-default">Reset</button>\\n    </div>\\n</form>\\n<script>\\n    jQuery(document).ready(function () {\\n        $("#input-21f").rating({\\n            starCaptions: function(val) {\\n                if (val < 3) {\\n                    return val;\\n                } else {\\n                    return \\\'high\\\';\\n                }\\n            },\\n            starCaptionClasses: function(val) {\\n                if (val < 3) {\\n                    return \\\'label label-danger\\\';\\n                } else {\\n                    return \\\'label label-success\\\';\\n                }\\n            },\\n            hoverOnClear: false\\n        });\\n        \\n        $(\\\'#rating-input\\\').rating({\\n              min: 0,\\n              max: 5,\\n              step: 1,\\n              size: \\\'lg\\\',\\n              showClear: false\\n           });\\n           \\n        $(\\\'#btn-rating-input\\\').on(\\\'click\\\', function() {\\n            $(\\\'#rating-input\\\').rating(\\\'refresh\\\', {\\n                showClear:true, \\n                disabled: !$(\\\'#rating-input\\\').attr(\\\'disabled\\\')\\n            });\\n        });\\n        \\n        \\n        $(\\\'.btn-danger\\\').on(\\\'click\\\', function() {\\n            $("#kartik").rating(\\\'destroy\\\');\\n        });\\n        \\n  $(\\\'.btn-success\\\').on(\\\'click\\\', function() {\\n            $("#kartik").rating(\\\'create\\\');\\n        });\\n        \\n        $(\\\'#rating-input\\\').on(\\\'rating.change\\\', function() {\\n            alert($(\\\'#rating-input\\\').val());\\n        });\\n        \\n        \\n        $(\\\'.rb-rating\\\').rating({\\\'showCaption\\\':true, \\\'stars\\\':\\\'3\\\', \\\'min\\\':\\\'0\\\', \\\'max\\\':\\\'3\\\', \\\'step\\\':\\\'1\\\', \\\'size\\\':\\\'xs\\\', \\\'starCaptions\\\': {0:\\\'status:nix\\\', 1:\\\'status:wackelt\\\', 2:\\\'status:geht\\\', 3:\\\'status:laeuft\\\'}});\\n    });\\n</script>\\n\', escape=False)\n            response.write(\'\\n\\t\\t  \\n\\t\\t  \', escape=False)\n            pass\n        response.write(\'\\n        </div>\\n      </div>\\n\\t  <div id="sidebar">\\n          \\t\\n       <div id="logo"></div>\\n            \', escape=False)\n        if session.user:\n            response.write(\'\\n              <p style="margin-left: 20px; font-size: 18px; font-family: sans-serif; color: #978f7c; text-decoration: none;">Hello \', escape=False)\n            response.write(A(user.username,\n            _href=URL("account", args=[user.id])))\n            response.write(\'. </br>\\n              To logout \', escape=False)\n            response.write(A("click",\n            _href=URL("user", "logout")))\n            response.write(\'.   </p>      \\n            \', escape=False)\n        else:\n            response.write(\'  \\n               <form style="margin-left: 20px; font-size: 18px; font-family: sans-serif; color: #978f7c; text-decoration: none;" action="\', escape=False)\n            response.write(URL(\'user\', \'signin\'))\n            response.write(\'" method="post">\\n                 Username: <input type="text" name="username" size=22><br>\\n                 Password: <input type="password" name="pw" size=22><br>\\n                  <input style="width: 173px;font-size: 18px; font-family: sans-serif; color: #978f7c; text-decoration: none;" type="submit" value="Log in">\\n              </form>\\n              \\n              \', escape=False)\n            pass\n        response.write(\' \\n          <!--\', escape=False)\n        if response.flash:\n            response.write(\'<div class="w2p_flash_signin alert alert-dismissable">\', escape=False)\n            response.write(A(response.flash, _href=URL("default", "index")))\n            response.write(\'</div> \', escape=False)\n            pass\n        response.write(\'\\n          \', escape=False)\n        if request.controller == "default" and request.function=="about" :\n            response.write(\'\\n\\t        \', escape=False)\n            response.write(\'<h4>Know more about our town</h4>\\n        <ul class="side-nav">\\n          <li><a href="default/history">History of Mu\\xc4\\x9fla</a></li>\\n          <li><a href="default/travelling">Travelling</a></li>\\n          <li><a href="https://en.wikipedia.org/wiki/Mu%C4%9Fla">Articles about Mu\\xc4\\x9fla</a></li>\\n          <li><a href="http://www.mu.edu.tr/">Mu\\xc4\\x9fla S\\xc4\\xb1tk\\xc4\\xb1 Ko\\xc3\\xa7man University</a></li>\\n        </ul>\\n\', escape=False)\n            response.write(\'\\n\\t\\t  \\n          \', escape=False)\n        else:\n            response.write(\'<h4>Offerings</h4>\\n        <ul>\\n          \\n          <li><a href="default/series">Series</a></li>\\n          <li><a href="default/lib">History of Library</a></li>\\n        </ul>\\n        <h4>Quotes</h4>\\n        <ul >\\n          <li><a href="default/shakespeare_quotes">Shakespeare</a></li>\\n          <li><a href="default/bestseller_quotes">From Bestsellers</a></li>\\n        </ul>\\n\', escape=False)\n            response.write(\'\\n           \\n            \\n      \', escape=False)\n            pass\n        response.write("-->\\n<div id=\'cssmenu\'>\\n<ul>\\n   <li class=\'active\'><a href=\'", escape=False)\n        response.write(URL(\'index\'))\n        response.write("\'><span>Home</span></a></li>\\n   <li class=\'active\'><a href=\'", escape=False)\n        response.write(URL(\'user\' , \'signup\'))\n        response.write("\'><span>SignUP</span></a></li>\\n   <li class=\'has-sub\'><a href=\'#\'><span>Some Classics</span></a>\\n      <ul>\\n         <li><a href=\'#\'><span>Jungle Book</span></a></li>\\n         <li><a href=\'#\'><span>Oliver Twist</span></a></li>\\n         <li class=\'last\'><a href=\'#\'><span>Product 3</span></a></li>\\n      </ul>\\n   </li>\\n   <li class=\'has-sub\'><a href=\'#\'><span>About</span></a>\\n      <ul>\\n         <li><a href=\'#\'><span>Company</span></a></li>\\n         <li class=\'last\'><a href=\'#\'><span>Contact</span></a></li>\\n      </ul>\\n   </li>\\n   <li class=\'last\'><a href=\'#\'><span>Contact</span></a></li>\\n</ul>\\n</div>\\n    </div>\\n", escape=False)\n        response.write(\'<div id="footer">\\n\\n\\n      <ul id="footer-nav">\\n\\t  \', escape=False)\n        menu2 = [("index", "Home"),("about", "About"),("classics","Classics"),\n        ("links","Links"),("contact","Contact Us"),\n        ("appguide","AppGuide")]\n        for (path1,text1) in menu2:\n            if request.controller == "default" and request.function== path1:\n                response.write(LI(A(text1, _href=URL(path1))))\n            elif request.controller == "default" and path1 != "index" and path1 != "about" and path1 != "classics" and path1 != "top100" and path1 != "shakespeare_bests" and path1 != "appguide":\n                response.write(LI(A(text1, _href=URL("error_page"))))\n            else:\n                response.write(LI(A(text1, _href=URL(path1))))\n                response.write(\'\\n\\t  \', escape=False)\n                pass\n            response.write(\'\\n\\t  \', escape=False)\n            pass\n        response.write(\'\\n\\t  \', escape=False)\n        pass\n    response.write(\'\\n\\n      </ul>\\n      <p class="copyright">Copyright 2016 Coding by Paawan & Satyam</p>\\n    </div>\\n  </div>\\n</div>\\n\\n\\n<!-- The javascript =============================================\\n       (Placed at the end of the document so the pages load faster) -->\\n\\n  <script src="\', escape=False)\n    response.write(URL(\'static\',\'js/bootstrap.min.js\'))\n    response.write(\'"></script>\\n  <link rel="\', escape=False)\n    response.write(URL(\'static\',\'css/bootstrap.min.css\'))\n    response.write(\'">\\n  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>\\n  <script src="\', escape=False)\n    response.write(URL(\'static\',\'js/web2py_bootstrap.js\'))\n    response.write(\'"></script>\\n  \', escape=False)\n    if response.google_analytics_id:\n        response.write(\'\\n    <script src="\', escape=False)\n        response.write(URL(\'static\',\'js/analytics.js\'))\n        response.write(\'"></script>\\n    <script type="text/javascript">\\n    analytics.initialize({\\n      \\\'Google Analytics\\\':{trackingId:\\\'\', escape=False)\n        response.write(response.google_analytics_id)\n        response.write("\'}\\n    });</script>\\n  ", escape=False)\n        pass\n    response.write(\'\\n</body>\\n</html>\\n\', escape=False)\n    response.write(\'\\n\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__module__'
+p12
+S"'gluon.rocket'"
+p13
+sS'__getslice__'
+p14
+S"<method-wrapper '__getslice__' of SocketTimeout object>"
+p15
+sS'__str__'
+p16
+S"<method-wrapper '__str__' of SocketTimeout object>"
+p17
+sS'__reduce__'
+p18
+S'<built-in method __reduce__ of SocketTimeout object>'
+p19
+sS'__dict__'
+p20
+S'{}'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of SocketTimeout object>'
+p23
+sS'__weakref__'
+p24
+S'None'
+p25
+sS'__init__'
+p26
+S"<method-wrapper '__init__' of SocketTimeout object>"
+p27
+sS'__setattr__'
+p28
+S"<method-wrapper '__setattr__' of SocketTimeout object>"
+p29
+sS'__reduce_ex__'
+p30
+S'<built-in method __reduce_ex__ of SocketTimeout object>'
+p31
+sS'__new__'
+p32
+S'<built-in method __new__ of type object>'
+p33
+sS'__format__'
+p34
+S'<built-in method __format__ of SocketTimeout object>'
+p35
+sS'__class__'
+p36
+S"<class 'gluon.rocket.SocketTimeout'>"
+p37
+sS'__doc__'
+p38
+S"'Exception for when a socket times out between requests.'"
+p39
+sS'__getitem__'
+p40
+S"<method-wrapper '__getitem__' of SocketTimeout object>"
+p41
+sS'__setstate__'
+p42
+S'<built-in method __setstate__ of SocketTimeout object>'
+p43
+sS'__getattribute__'
+p44
+S"<method-wrapper '__getattribute__' of SocketTimeout object>"
+p45
+sS'args'
+p46
+S"('Socket timed out before request.',)"
+p47
+sS'__subclasshook__'
+p48
+S'<built-in method __subclasshook__ of type object>'
+p49
+sS'__unicode__'
+p50
+S'<built-in method __unicode__ of SocketTimeout object>'
+p51
+sS'__delattr__'
+p52
+S"<method-wrapper '__delattr__' of SocketTimeout object>"
+p53
+sS'__repr__'
+p54
+S"<method-wrapper '__repr__' of SocketTimeout object>"
+p55
+sS'__hash__'
+p56
+S"<method-wrapper '__hash__' of SocketTimeout object>"
+p57
+ssS'evalue'
+p58
+S'Socket timed out before request.'
+p59
+sS'frames'
+p60
+(lp61
+(dp62
+S'file'
+p63
+S'/home/satyam/itws/web2py/gluon/rocket.py'
+p64
+sS'dump'
+p65
+(dp66
+S'self'
+p67
+S'<WSGIWorker(Thread-8, started daemon 140416364046080)>'
+p68
+sS'conn'
+p69
+S'<gluon.rocket.Connection object>'
+p70
+sS'self.run_app'
+p71
+S'<bound method WSGIWorker.run_app of <WSGIWorker(Thread-8, started daemon 140416364046080)>>'
+p72
+ssS'lnum'
+p73
+I1337
+sS'lines'
+p74
+(dp75
+I1332
+S'            # Enter connection serve loop'
+p76
+sI1333
+S'            while True:'
+p77
+sI1334
+S'                if __debug__:'
+p78
+sI1335
+S"                    self.err_log.debug('Serving a request')"
+p79
+sI1336
+S'                try:'
+p80
+sI1337
+S'                    self.run_app(conn)'
+p81
+sI1338
+S'                except:'
+p82
+sI1339
+S'                    exc = sys.exc_info()'
+p83
+sI1340
+S'                    handled = self._handleError(*exc)'
+p84
+sI1341
+S'                    if handled:'
+p85
+ssS'call'
+p86
+S'(self=<WSGIWorker(Thread-8, started daemon 140416364046080)>)'
+p87
+sS'func'
+p88
+S'run'
+p89
+sa(dp90
+g63
+S'/home/satyam/itws/web2py/gluon/rocket.py'
+p91
+sg65
+(dp92
+S'self'
+p93
+S'<WSGIWorker(Thread-8, started daemon 140416364046080)>'
+p94
+sS'self.environ'
+p95
+S"{'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, sdch', 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.8', 'HTTP_CACHE_CONTROL': 'max-age=0', 'HTTP_CONNECTION': 'keep-alive', 'HTTP_COOKIE': 'session_id_modern_library=127.0.0.1-ac50e68e-b7f...in=127.0.0.1-18106b03-5fa8-4a95-bd7b-d3cd426dae19', 'HTTP_HOST': '127.0.0.1:8000', 'HTTP_UPGRADE_INSECURE_REQUESTS': '1', 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537..../49.0.2623.108 Chrome/49.0.2623.108 Safari/537.36', 'PATH_INFO': '/library/default/books/1', ...}"
+p96
+sS'sock_file'
+p97
+S'<socket._fileobject object>'
+p98
+sS'environ'
+p99
+S'undefined'
+p100
+sS'self.build_environ'
+p101
+S'<bound method WSGIWorker.build_environ of <WSGIWorker(Thread-8, started daemon 140416364046080)>>'
+p102
+sS'conn'
+p103
+S'<gluon.rocket.Connection object>'
+p104
+ssg73
+I1830
+sg74
+(dp105
+I1825
+S'        else:'
+p106
+sI1826
+S'            sock_file = conn.makefile(BUF_SIZE)'
+p107
+sI1827
+S''
+sI1828
+S'        try:'
+p108
+sI1829
+S'            # Read the headers and build our WSGI environment'
+p109
+sI1830
+S'            self.environ = environ = self.build_environ(sock_file, conn)'
+p110
+sI1831
+S''
+sI1832
+S'            # Handle 100 Continue'
+p111
+sI1833
+S"            if environ.get('HTTP_EXPECT', '') == '100-continue':"
+p112
+sI1834
+S"                res = environ['SERVER_PROTOCOL'] + ' 100 Continue\\r\\n\\r\\n'"
+p113
+ssg86
+S'(self=<WSGIWorker(Thread-8, started daemon 140416364046080)>, conn=<gluon.rocket.Connection object>)'
+p114
+sg88
+S'run_app'
+p115
+sa(dp116
+g63
+S'/home/satyam/itws/web2py/gluon/rocket.py'
+p117
+sg65
+(dp118
+S'sock_file'
+p119
+S'<socket._fileobject object>'
+p120
+sS'self.read_request_line'
+p121
+S'<bound method WSGIWorker.read_request_line of <W...orker(Thread-8, started daemon 140416364046080)>>'
+p122
+sS'self'
+p123
+S'<WSGIWorker(Thread-8, started daemon 140416364046080)>'
+p124
+sS'request'
+p125
+g100
+ssg73
+I1650
+sg74
+(dp126
+I1645
+S'                                      "wsgiorg.futures": executor.futures})'
+p127
+sI1646
+S''
+sI1647
+S'    def build_environ(self, sock_file, conn):'
+p128
+sI1648
+S'        """ Build the execution environment. """'
+p129
+sI1649
+S'        # Grab the request line'
+p130
+sI1650
+S'        request = self.read_request_line(sock_file)'
+p131
+sI1651
+S''
+sI1652
+S'        # Copy the Base Environment'
+p132
+sI1653
+S'        environ = self.base_environ.copy()'
+p133
+sI1654
+S''
+ssg86
+S'(self=<WSGIWorker(Thread-8, started daemon 140416364046080)>, sock_file=<socket._fileobject object>, conn=<gluon.rocket.Connection object>)'
+p134
+sg88
+S'build_environ'
+p135
+sa(dp136
+g63
+S'/home/satyam/itws/web2py/gluon/rocket.py'
+p137
+sg65
+(dp138
+S'global SocketTimeout'
+p139
+S"<class 'gluon.rocket.SocketTimeout'>"
+p140
+ssg73
+I1401
+sg74
+(dp141
+I1396
+S''
+sI1397
+S'                d = sock_file.readline()'
+p142
+sI1398
+S'                if PY3K:'
+p143
+sI1399
+S"                    d = d.decode('ISO-8859-1')"
+p144
+sI1400
+S'        except socket.timeout:'
+p145
+sI1401
+S"            raise SocketTimeout('Socket timed out before request.')"
+p146
+sI1402
+S'        except TypeError:'
+p147
+sI1403
+S'            raise SocketClosed('
+p148
+sI1404
+S"                'SSL bug caused closure of socket.  See '"
+p149
+sI1405
+S'                \'"https://groups.google.com/d/topic/web2py/P_Gw0JxWzCs".\')'
+p150
+ssg86
+S'(self=<WSGIWorker(Thread-8, started daemon 140416364046080)>, sock_file=<socket._fileobject object>)'
+p151
+sg88
+S'read_request_line'
+p152
+sasS'pyver'
+p153
+S'Python 2.7.10: /usr/bin/python (prefix: /usr)'
+p154
+sS'etype'
+p155
+S"<class 'gluon.rocket.SocketTimeout'>"
+p156
+sS'date'
+p157
+S'Tue Apr 26 02:46:18 2016'
+p158
+sS'locals'
+p159
+(dp160
+S'sock_file'
+p161
+S'<socket._fileobject object>'
+p162
+sS'self'
+p163
+S'<WSGIWorker(Thread-8, started daemon 140416364046080)>'
+p164
+sssS'traceback'
+p165
+S'Traceback (most recent call last):\n  File "/home/satyam/itws/web2py/gluon/rocket.py", line 1337, in run\n    self.run_app(conn)\n  File "/home/satyam/itws/web2py/gluon/rocket.py", line 1830, in run_app\n    self.environ = environ = self.build_environ(sock_file, conn)\n  File "/home/satyam/itws/web2py/gluon/rocket.py", line 1650, in build_environ\n    request = self.read_request_line(sock_file)\n  File "/home/satyam/itws/web2py/gluon/rocket.py", line 1401, in read_request_line\n    raise SocketTimeout(\'Socket timed out before request.\')\nSocketTimeout: Socket timed out before request.\n'
+p166
+s.

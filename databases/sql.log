@@ -1,0 +1,789 @@
+timestamp: 2016-03-04T14:16:27.061826
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512),
+    registration_id CHAR(512)
+);
+success!
+timestamp: 2016-03-04T14:16:27.181029
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2016-03-04T14:16:27.294036
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  ,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE  
+);
+success!
+timestamp: 2016-03-04T14:16:27.415877
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE  ,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2016-03-04T14:16:27.538386
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  ,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2016-03-04T14:16:27.650192
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  ,
+    created_on TIMESTAMP,
+    service CHAR(512),
+    ticket CHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2016-04-12T15:10:08.796855
+CREATE TABLE post(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    image_id INTEGER,
+    field CHAR(512),
+    author INTEGER,
+    email CHAR(512),
+    age CHAR(512),
+    body TEXT
+);
+success!
+timestamp: 2016-04-12T15:10:09.000043
+CREATE TABLE user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username CHAR(512) UNIQUE,
+    password CHAR(512),
+    roll_number INTEGER,
+    role CHAR(512),
+    email CHAR(512),
+    age INTEGER,
+    city CHAR(512),
+    information CHAR(100000),
+    login_time INTEGER
+);
+success!
+timestamp: 2016-04-12T15:10:09.226024
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(1000000)
+);
+timestamp: 2016-04-12T15:10:23.790734
+CREATE TABLE authors(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(512) UNIQUE,
+    bio CHAR(1000000),
+    file CHAR(512)
+);
+success!
+timestamp: 2016-04-12T15:10:24.001032
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(1000000)
+);
+timestamp: 2016-04-12T15:11:08.837313
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(1000000)
+);
+timestamp: 2016-04-12T15:11:24.118042
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(1000000)
+);
+timestamp: 2016-04-12T15:12:00.671844
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(1000000)
+);
+timestamp: 2016-04-12T15:12:08.814321
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(1000000)
+);
+timestamp: 2016-04-12T15:12:19.003824
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T15:13:08.837783
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T15:14:08.831986
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T15:15:08.907715
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T15:16:08.823486
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T15:17:08.823071
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T15:18:08.821958
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T15:19:08.813660
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T15:20:08.821884
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T15:21:08.826721
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T15:22:08.844915
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T15:23:08.842646
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T16:39:29.836454
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T18:46:37.222892
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T18:47:37.220965
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T18:48:37.199307
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:00:13.622001
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:01:13.604861
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:02:13.629520
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:03:13.996554
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:04:13.989858
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:05:13.968814
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:06:13.951881
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:07:13.976539
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:08:13.973345
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:09:14.060192
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:10:13.992194
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:11:14.017616
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T19:36:00.443320
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T21:05:19.829309
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T21:05:39.510749
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T22:32:56.879715
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T22:33:37.282031
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T22:36:29.975004
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T22:36:35.220513
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(<class 'gluon.validators.IS_NOT_EMPTY'>),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+timestamp: 2016-04-12T22:37:03.487323
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author INTEGER,
+    author_name CHAR(512),
+    title CHAR(512) UNIQUE,
+    category CHAR(512),
+    price INTEGER,
+    year INTEGER,
+    publisher CHAR(512),
+    amazon_link CHAR(1000),
+    betterworld_link CHAR(1000),
+    idefix_link CHAR(1000),
+    file CHAR(512),
+    info CHAR(10000)
+);
+success!
+success!
+success!
+timestamp: 2016-04-20T23:28:01.430355
+ALTER TABLE user ADD photo CHAR(512);
+success!
+timestamp: 2016-04-25T21:28:31.096559
+CREATE TABLE advanced_search(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author CHAR(512),
+    book CHAR(512),
+    category CHAR(512),
+    year CHAR(512),
+    price CHAR(512),
+    publisher CHAR(512)
+);
+success!
+timestamp: 2016-04-25T22:02:31.250849
+ALTER TABLE books ADD available INTEGER;
+timestamp: 2016-04-25T22:02:31.362482
+ALTER TABLE books ADD total_copies INTEGER;
+success!
+timestamp: 2016-04-26T00:38:59.730648
+ALTER TABLE post ADD star INTEGER;
+success!
+success!
+timestamp: 2016-04-26T06:11:24.720129
+ALTER TABLE books ADD rating DOUBLE;
+success!

@@ -1,0 +1,14 @@
+Äcgluon.globals
+Session
+q}q(U_formkey[user/create]q]q(U$f92ea94b-94fe-446a-bd85-911bb9f9490dqU$ea34bde0-b58b-49ae-a977-e56166d92333qeUlast_orderbyqNU
+last_queryqUdb.user.id>0q	U_formkey[default]q
+]q(U$a62014a7-1655-49f4-b7fc-9668a601798bqU$58afdad1-0354-40d9-92f8-82229deb1a2aqU$2bbffdc0-7da6-435a-b13d-a1bd4bdec742qU$fd2a12a0-4e2b-4c52-98cc-6389e064d770qU$959a8bf9-3ff8-4412-9de0-45a3a3312585qU$94bf8e84-354f-45d7-a5f5-411cf2bb25f8qU$1dd457da-1ddd-4510-ba2a-570e1c034d0bqU$bcaca5da-579d-4648-b0dc-74a2eab42f4eqU$70044c66-8acb-40fa-b7e2-d5b85c93c914qU$8474b9ab-117c-446b-8161-3818a774ca66qeUuserqcpydal.objects
+Row
+q}q(UusernameqUsatyamqUcityqUsasqUinformationqUassaqUupdate_recordqcpydal.helpers.classes
+RecordUpdater
+q )Åq!}q"(Ucolsetq#h}q$(hhhhhhhh!Uageq%äUidq&äUroleq'Usasaq(Upasswordq)U	satyam123q*Uemailq+Uassa@gmail.comq,Udelete_recordq-cpydal.helpers.classes
+RecordDeleter
+q.)Åq/}q0(U	tablenameq1Uuserq2Udbq3cpydal.base
+DAL_unpickler
+q4U 8f8c2c36867443c686d3bcdf72be5bc3q5ÖRq6Uidq7äubU
+login_timeq8JO¯WuÖRh1h2h3h6h7äubh%äh&äh'h(h)h*h+h,h-h/h8JO¯WuÖRq9uÖRq:.

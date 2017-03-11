@@ -1,0 +1,11 @@
+<h4>Offerings</h4>
+        <ul class="side-nav">
+          
+          <li><a href="default/series">Series</a></li>
+          <li><a href="default/lib">History of Library</a></li>
+        </ul>
+        <h4>Quotes</h4>
+        <ul class="side-nav">
+          <li><a href="default/shakespeare_quotes">Shakespeare</a></li>
+          <li><a href="default/bestseller_quotes">From Bestsellers</a></li>
+        </ul>
